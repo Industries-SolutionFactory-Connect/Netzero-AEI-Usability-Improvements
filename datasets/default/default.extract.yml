@@ -1,0 +1,288 @@
+extract:
+  Account:
+    fields:
+    - Description
+    - Fax
+    - Name
+    - AccountNumber
+    - Phone
+    - Rating
+    - Site
+    - AccountSource
+    - Type
+    - AnnualRevenue
+    - BillingCity
+    - BillingCountry
+    - BillingGeocodeAccuracy
+    - BillingLatitude
+    - BillingLongitude
+    - BillingState
+    - BillingStreet
+    - BillingPostalCode
+    - Jigsaw
+    - NumberOfEmployees
+    - Industry
+    - Ownership
+    - ParentId
+    - ShippingCity
+    - ShippingCountry
+    - ShippingGeocodeAccuracy
+    - ShippingLatitude
+    - ShippingLongitude
+    - ShippingState
+    - ShippingStreet
+    - ShippingPostalCode
+    - Sic
+    - SicDesc
+    - TickerSymbol
+    - Website
+  AccountAccountRelation:
+    fields:
+    - AccountId
+    - IsActive
+    - EndDate
+    - HierarchyType
+    - PartyRoleRelationId
+    - RelatedAccountId
+    - RelatedInverseRecordId
+    - StartDate
+  PartyRoleRelation:
+    fields:
+    - Name
+    - RelatedRoleName
+    - RelationshipObjectName
+    - RoleName
+    - ShouldCreaInversRoleAuto
+    - RelatedInverseRecordId
+  AnnualEmssnInventory:
+    fields:
+    - AccountNameId
+    - AllocScope1EmssnOverride
+    - AllocScope2EmssnOverride
+    - AllocScope3EmssnOverride
+    - EnergyUsageCmclBldOverride
+    - EnergyUsageDataCtrOverride
+    - Name
+    - RenewableEnrgyPctCmclBldOvride
+    - RenewableEnrgyPctDataCtrOvride
+    - Scope1EmssnCmclBldOverride
+    - Scope1EmssnDataCentersOverride
+    - Scp1EmssnFleetVehiclesOverride
+    - Scope1EmssnPrivateJetsOverride
+    - Scp1EmssnWstGenOvrideInTco2e
+    - Scp2EmssnFleetVehiclesOverride
+    - Scp2EmssnPrivateJetsOverride
+    - Scope2EmissionsType
+    - Scp2LocBsdEmssnCmclBldOverride
+    - Scp2LocBsdEmssnDataCtrOvride
+    - Scp2MktBsdEmssnCmclBldOverride
+    - Scp2MktBsdEmssnDataCtrOverride
+    - Scp3EmssnBusinessTravelOvride
+    - Scope3EmssnCapitalGoodsOvride
+    - Scope3EmssnCmclBldOverride
+    - Scope3EmssnDataCentersOverride
+    - Scp3EmssnDnstrmLeasedAstOvride
+    - Scp3EmssnDnstrmTrnspDstrOvride
+    - Scope3EmssnEmpCommutingOvride
+    - Scp3EmssnEolSoldPrdctOvride
+    - Scp3EmssnFleetVehiclesOverride
+    - Scope3EmssnFranchisesOverride
+    - Scp3EmssnFuelEnrgyActvtyOvride
+    - Scope3EmssnInvestmentsOverride
+    - Scp3EmssnPrivateJetsOverride
+    - Scp3EmssnProcSoldPrdctOverride
+    - Scp3EmssnPurchGoodsSrvcsOvride
+    - Scp3EmssnUpstrmLeasedAstOvride
+    - Scp3EmssnUpstrmTrnspDstrOvride
+    - Scp3EmssnUseOfSoldPrdctOvride
+    - Scp3EmssnWasteGenInOperOvride
+    - Scp3UncategorizedEmssnOverride
+    - TotalScope1EmissionsOverride
+    - TotalScope2EmissionsOverride
+    - TotalScope3EmissionsOverride
+    - TotalSuplScope3EmssnOverride
+    - Year
+  ElectricityEmssnFctrSet:
+    fields:
+    - Ch4EmissionRate
+    - Ch4EmissionRateUnit
+    - City
+    - Co2EmissionRate
+    - Co2EmissionRateUnit
+    - Co2eEmissionRate
+    - Co2eEmissionRateUnit
+    - Country
+    - EmissionFactorDataSource
+    - GenlConversionFctrRevisionDate
+    - EmissionsFactorType
+    - EmissionFactorUpdateYear
+    - ExternalIdentifier
+    - GridSubregion
+    - LocationBasedBiomassMixPct
+    - LocationBasedCoalMixPct
+    - LocationBasedGasMixPct
+    - LocBasedGeothermalMixPct
+    - LocationBasedHydroMixPct
+    - LocationBasedNuclearMixPct
+    - LocationBasedOilMixPct
+    - LocBasedOtherFossilFuelMixPct
+    - LocationBasedOtherFuelMixPct
+    - LocationBasedSolarMixPct
+    - LocationBasedWindMixPct
+    - ShouldLockDtastUpdtForRec
+    - MarketBasedBiomassMixPct
+    - MktBsdCh4EmssnRate
+    - MktBsdCh4EmssnRateUnit
+    - MktBsdCo2EmssnRate
+    - MktBsdCo2EmssnRateUnit
+    - MktBsdCo2eEmissionRate
+    - MktBsdCo2eEmissionRateUnit
+    - MarketBasedCoalMixPct
+    - MktBsdDataSrcType
+    - MarketBasedGasMixPct
+    - MktBasedGeothermalMixPct
+    - MarketBasedHydroMixPct
+    - MktBsdN2oEmssnRate
+    - MktBsdN2oEmssnRateUnit
+    - MarketBasedNuclearMixPct
+    - MarketBasedOilMixPct
+    - MktBasedOtherFossilFuelMixPct
+    - MarketBasedOtherFuelMixPct
+    - MarketBasedSolarMixPct
+    - MarketBasedWindMixPct
+    - N2oEmissionRate
+    - N2oEmissionRateUnit
+    - Name
+    - OtherEmssnFctrId
+    - PostalCodeSet
+    - State
+    - MktBsdElectrSupplierId
+  Supplier:
+    fields:
+    - Name
+  InternalOrganizationUnit:
+    fields:
+    - AccountId
+    - Description
+    - ParentOrganizationId
+    - OrganizationCode
+    - OrganizationName
+    - IsParentCompany
+    - Type
+  StnryAssetEnrgyUse:
+    fields:
+    - AllocatedRenewableEnergyInKwh
+    - CarbonFootprintReportDate
+    - DataGapFillingMethodName
+    - ElectricityEmissionFactorsId
+    - MktBsdElectriEmssnFctrId
+    - EndDate
+    - FinalEnergyConsumption
+    - FuelConsumption
+    - FuelConsumptionUnit
+    - FuelType
+    - Name
+    - OccupiedFloorArea
+    - OccupiedFloorAreaUnit
+    - OtherEmssnFctrId
+    - PowerUsageEffectiveness
+    - ProposedEnergyConsumption
+    - RefrigerantEmssnFctrId
+    - RenewableEnergyType
+    - StartDate
+    - StnryAssetCrbnFtprntId
+    - StnryAssetEnvrSrcId
+    - SuplScope1Emissions
+    - SuplScope2LocationBasedEmssn
+    - SuplScope2MarketBasedEmssn
+    - SuplScope3DnstrmEmissions
+    - SuplScope3UpstrmEmissions
+    - SupplierId
+    - IsSystemGeneratedRecord
+    - TotalFloorArea
+    - TotalFloorAreaUnit
+  OtherEmssnFctrSet:
+    fields:
+    - Ch4GlblWarmingPot
+    - EmissionFactorDataSource
+    - EmissionFactorUpdateYear
+    - ExternalIdentifier
+    - N2oGlblWarmingPot
+    - Name
+    - RefrigerantLeakageRtInKgItKwh
+    - RefrigerantLeakageRtInKgM2
+    - RefrigerantLeakageRtInKgSqft
+    - ShouldLockDtastUpdtForRec
+  RefrigerantEmssnFctr:
+    fields:
+    - Name
+  StnryAssetCrbnFtprnt:
+    fields:
+    - AllocationStatus
+    - AuditApprovalStatus
+    - DataGapStatus
+    - EndDate
+    - FootprintStage
+    - Name
+    - OccupiedFloorArea
+    - OccupiedFloorAreaUnit
+    - ReportingDate
+    - ReportingYear
+    - StartDate
+    - SuplScope1Emissions
+    - SuplScope2LocationBasedEmssn
+    - SuplScope2MarketBasedEmssn
+    - SuplScope3DnstrmEmissions
+    - SuplScope3UpstrmEmissions
+    - TotalFloorArea
+    - TotalFloorAreaUnit
+    - AnnualEmssnInventoryId
+    - BuildingEnergyIntensityId
+    - RegionalBldgEnergyIntensityId
+    - PrevYrAnnlCarbonFootprintId
+    - StnryAssetEnvrSrcId
+  StnryAssetEnvrSrc:
+    fields:
+    - BusinessRegion
+    - City
+    - Country
+    - Description
+    - IsCompanyOwnedAsset
+    - IsLeedCertified
+    - LeaseExpirationDate
+    - LeaseIdentifier
+    - Name
+    - OccupiedFloorArea
+    - OccupiedFloorAreaUnit
+    - PostalCode
+    - PremiseIdentifier
+    - State
+    - StationaryAssetIdentifier
+    - StationaryAssetType
+    - StreetAddress
+    - StreetAddress2
+    - TotalFloorArea
+    - TotalFloorAreaUnit
+    - AccountNameId
+    - RegionalBldgEnergyIntensityId
+    - CrbnEmssnScopeAllocId
+    - ElectricityEmssnFctrId
+    - MktBsdElectriEmssnFctrId
+    - EnvironmentalRiskId
+    - OtherEmssnFctrId
+    - RecordTypeId
+    - RefrigerantEmssnFctrId
+    - ParentEnvironmentalSourceId
+    - WstDispoEmssnFctrSetId
+  BldgEnrgyIntensity:
+    fields:
+    - Name
+  CrbnEmssnScopeAlloc:
+    fields:
+    - Name
+  EnvironmentalRisk:
+    fields:
+    - Name
+  WstDispoEmssnFctrSet:
+    fields:
+    - Name
