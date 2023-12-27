@@ -123,59 +123,7 @@ Insert AccountAccountRelation:
       table: AccountAccountRelation
       key_field: RelatedInverseRecordId
       after: Insert AccountAccountRelation
-Insert AnnualEmssnInventory:
-  sf_object: AnnualEmssnInventory
-  table: AnnualEmssnInventory
-  fields:
-  - AllocScope1EmssnOverride
-  - AllocScope2EmssnOverride
-  - AllocScope3EmssnOverride
-  - EnergyUsageCmclBldOverride
-  - EnergyUsageDataCtrOverride
-  - Name
-  - RenewableEnrgyPctCmclBldOvride
-  - RenewableEnrgyPctDataCtrOvride
-  - Scope1EmssnCmclBldOverride
-  - Scope1EmssnDataCentersOverride
-  - Scp1EmssnFleetVehiclesOverride
-  - Scope1EmssnPrivateJetsOverride
-  - Scp1EmssnWstGenOvrideInTco2e
-  - Scp2EmssnFleetVehiclesOverride
-  - Scp2EmssnPrivateJetsOverride
-  - Scope2EmissionsType
-  - Scp2LocBsdEmssnCmclBldOverride
-  - Scp2LocBsdEmssnDataCtrOvride
-  - Scp2MktBsdEmssnCmclBldOverride
-  - Scp2MktBsdEmssnDataCtrOverride
-  - Scp3EmssnBusinessTravelOvride
-  - Scope3EmssnCapitalGoodsOvride
-  - Scope3EmssnCmclBldOverride
-  - Scope3EmssnDataCentersOverride
-  - Scp3EmssnDnstrmLeasedAstOvride
-  - Scp3EmssnDnstrmTrnspDstrOvride
-  - Scope3EmssnEmpCommutingOvride
-  - Scp3EmssnEolSoldPrdctOvride
-  - Scp3EmssnFleetVehiclesOverride
-  - Scope3EmssnFranchisesOverride
-  - Scp3EmssnFuelEnrgyActvtyOvride
-  - Scope3EmssnInvestmentsOverride
-  - Scp3EmssnPrivateJetsOverride
-  - Scp3EmssnProcSoldPrdctOverride
-  - Scp3EmssnPurchGoodsSrvcsOvride
-  - Scp3EmssnUpstrmLeasedAstOvride
-  - Scp3EmssnUpstrmTrnspDstrOvride
-  - Scp3EmssnUseOfSoldPrdctOvride
-  - Scp3EmssnWasteGenInOperOvride
-  - Scp3UncategorizedEmssnOverride
-  - TotalScope1EmissionsOverride
-  - TotalScope2EmissionsOverride
-  - TotalScope3EmissionsOverride
-  - TotalSuplScope3EmssnOverride
-  - Year
-  lookups:
-    AccountNameId:
-      table: Account
-      key_field: AccountNameId
+
 Insert Supplier:
   sf_object: Supplier
   table: Supplier
@@ -409,3 +357,56 @@ Insert StnryAssetEnrgyUse:
     SupplierId:
       table: Supplier
       key_field: SupplierId
+Insert AnnualEmssnInventory:
+  sf_object: AnnualEmssnInventory
+  table: AnnualEmssnInventory
+  fields:
+  - AllocScope1EmssnOverride
+  - AllocScope2EmssnOverride
+  - AllocScope3EmssnOverride
+  - EnergyUsageCmclBldOverride
+  - EnergyUsageDataCtrOverride
+  - Name
+  - RenewableEnrgyPctCmclBldOvride
+  - RenewableEnrgyPctDataCtrOvride
+  - Scope1EmssnCmclBldOverride
+  - Scope1EmssnDataCentersOverride
+  - Scp1EmssnFleetVehiclesOverride
+  - Scope1EmssnPrivateJetsOverride
+  - Scp1EmssnWstGenOvrideInTco2e
+  - Scp2EmssnFleetVehiclesOverride
+  - Scp2EmssnPrivateJetsOverride
+  - Scope2EmissionsType
+  - Scp2LocBsdEmssnCmclBldOverride
+  - Scp2LocBsdEmssnDataCtrOvride
+  - Scp2MktBsdEmssnCmclBldOverride
+  - Scp2MktBsdEmssnDataCtrOverride
+  - Scp3EmssnBusinessTravelOvride
+  - Scope3EmssnCapitalGoodsOvride
+  - Scope3EmssnCmclBldOverride
+  - Scope3EmssnDataCentersOverride
+  - Scp3EmssnDnstrmLeasedAstOvride
+  - Scp3EmssnDnstrmTrnspDstrOvride
+  - Scope3EmssnEmpCommutingOvride
+  - Scp3EmssnEolSoldPrdctOvride
+  - Scp3EmssnFleetVehiclesOverride
+  - Scope3EmssnFranchisesOverride
+  - Scp3EmssnFuelEnrgyActvtyOvride
+  - Scope3EmssnInvestmentsOverride
+  - Scp3EmssnPrivateJetsOverride
+  - Scp3EmssnProcSoldPrdctOverride
+  - Scp3EmssnPurchGoodsSrvcsOvride
+  - Scp3EmssnUpstrmLeasedAstOvride
+  - Scp3EmssnUpstrmTrnspDstrOvride
+  - Scp3EmssnUseOfSoldPrdctOvride
+  - Scp3EmssnWasteGenInOperOvride
+  - Scp3UncategorizedEmssnOverride
+  - TotalScope1EmissionsOverride
+  - TotalScope2EmissionsOverride
+  - TotalScope3EmissionsOverride
+  - TotalSuplScope3EmssnOverride
+  - Year
+  lookups:
+    AccountNameId:
+      table: Account
+      key_field: AccountNameId
