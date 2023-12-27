@@ -1,0 +1,411 @@
+# Editing this file is usually not recommended because it will
+# be overwritten the next time you re-capture this data.
+#
+# You can change this file's contents permanently by creating a
+# .load.yml file and re-capturing:
+#
+#  https://cumulusci.readthedocs.io/en/stable/data.html#extracting-and-loading-sample-datasets
+Insert Account:
+  sf_object: Account
+  table: Account
+  fields:
+  - Description
+  - Fax
+  - Name
+  - AccountNumber
+  - Phone
+  - Rating
+  - Site
+  - AccountSource
+  - Type
+  - AnnualRevenue
+  - BillingCity
+  - BillingCountry
+  - BillingGeocodeAccuracy
+  - BillingLatitude
+  - BillingLongitude
+  - BillingState
+  - BillingStreet
+  - BillingPostalCode
+  - Jigsaw
+  - NumberOfEmployees
+  - Industry
+  - Ownership
+  - ShippingCity
+  - ShippingCountry
+  - ShippingGeocodeAccuracy
+  - ShippingLatitude
+  - ShippingLongitude
+  - ShippingState
+  - ShippingStreet
+  - ShippingPostalCode
+  - Sic
+  - SicDesc
+  - TickerSymbol
+  - Website
+  lookups:
+    ParentId:
+      table: Account
+      key_field: ParentId
+      after: Insert Account
+Insert PartyRoleRelation:
+  sf_object: PartyRoleRelation
+  table: PartyRoleRelation
+  fields:
+  - Name
+  - RelatedRoleName
+  - RelationshipObjectName
+  - RoleName
+  - ShouldCreaInversRoleAuto
+  lookups:
+    RelatedInverseRecordId:
+      table: PartyRoleRelation
+      key_field: RelatedInverseRecordId
+      after: Insert PartyRoleRelation
+Insert OtherEmssnFctrSet:
+  sf_object: OtherEmssnFctrSet
+  table: OtherEmssnFctrSet
+  fields:
+  - Ch4GlblWarmingPot
+  - EmissionFactorDataSource
+  - EmissionFactorUpdateYear
+  - ExternalIdentifier
+  - N2oGlblWarmingPot
+  - Name
+  - RefrigerantLeakageRtInKgItKwh
+  - RefrigerantLeakageRtInKgM2
+  - RefrigerantLeakageRtInKgSqft
+  - ShouldLockDtastUpdtForRec
+Insert RefrigerantEmssnFctr:
+  sf_object: RefrigerantEmssnFctr
+  table: RefrigerantEmssnFctr
+  fields:
+  - Name
+Insert BldgEnrgyIntensity:
+  sf_object: BldgEnrgyIntensity
+  table: BldgEnrgyIntensity
+  fields:
+  - Name
+Insert CrbnEmssnScopeAlloc:
+  sf_object: CrbnEmssnScopeAlloc
+  table: CrbnEmssnScopeAlloc
+  fields:
+  - Name
+Insert EnvironmentalRisk:
+  sf_object: EnvironmentalRisk
+  table: EnvironmentalRisk
+  fields:
+  - Name
+Insert WstDispoEmssnFctrSet:
+  sf_object: WstDispoEmssnFctrSet
+  table: WstDispoEmssnFctrSet
+  fields:
+  - Name
+Insert AccountAccountRelation:
+  sf_object: AccountAccountRelation
+  table: AccountAccountRelation
+  fields:
+  - IsActive
+  - EndDate
+  - HierarchyType
+  - StartDate
+  lookups:
+    AccountId:
+      table: Account
+      key_field: AccountId
+    PartyRoleRelationId:
+      table: PartyRoleRelation
+      key_field: PartyRoleRelationId
+    RelatedAccountId:
+      table: Account
+      key_field: RelatedAccountId
+    RelatedInverseRecordId:
+      table: AccountAccountRelation
+      key_field: RelatedInverseRecordId
+      after: Insert AccountAccountRelation
+Insert AnnualEmssnInventory:
+  sf_object: AnnualEmssnInventory
+  table: AnnualEmssnInventory
+  fields:
+  - AllocScope1EmssnOverride
+  - AllocScope2EmssnOverride
+  - AllocScope3EmssnOverride
+  - EnergyUsageCmclBldOverride
+  - EnergyUsageDataCtrOverride
+  - Name
+  - RenewableEnrgyPctCmclBldOvride
+  - RenewableEnrgyPctDataCtrOvride
+  - Scope1EmssnCmclBldOverride
+  - Scope1EmssnDataCentersOverride
+  - Scp1EmssnFleetVehiclesOverride
+  - Scope1EmssnPrivateJetsOverride
+  - Scp1EmssnWstGenOvrideInTco2e
+  - Scp2EmssnFleetVehiclesOverride
+  - Scp2EmssnPrivateJetsOverride
+  - Scope2EmissionsType
+  - Scp2LocBsdEmssnCmclBldOverride
+  - Scp2LocBsdEmssnDataCtrOvride
+  - Scp2MktBsdEmssnCmclBldOverride
+  - Scp2MktBsdEmssnDataCtrOverride
+  - Scp3EmssnBusinessTravelOvride
+  - Scope3EmssnCapitalGoodsOvride
+  - Scope3EmssnCmclBldOverride
+  - Scope3EmssnDataCentersOverride
+  - Scp3EmssnDnstrmLeasedAstOvride
+  - Scp3EmssnDnstrmTrnspDstrOvride
+  - Scope3EmssnEmpCommutingOvride
+  - Scp3EmssnEolSoldPrdctOvride
+  - Scp3EmssnFleetVehiclesOverride
+  - Scope3EmssnFranchisesOverride
+  - Scp3EmssnFuelEnrgyActvtyOvride
+  - Scope3EmssnInvestmentsOverride
+  - Scp3EmssnPrivateJetsOverride
+  - Scp3EmssnProcSoldPrdctOverride
+  - Scp3EmssnPurchGoodsSrvcsOvride
+  - Scp3EmssnUpstrmLeasedAstOvride
+  - Scp3EmssnUpstrmTrnspDstrOvride
+  - Scp3EmssnUseOfSoldPrdctOvride
+  - Scp3EmssnWasteGenInOperOvride
+  - Scp3UncategorizedEmssnOverride
+  - TotalScope1EmissionsOverride
+  - TotalScope2EmissionsOverride
+  - TotalScope3EmissionsOverride
+  - TotalSuplScope3EmssnOverride
+  - Year
+  lookups:
+    AccountNameId:
+      table: Account
+      key_field: AccountNameId
+Insert Supplier:
+  sf_object: Supplier
+  table: Supplier
+  fields:
+  - Name
+  lookups:
+    AccountId:
+      table: Account
+      key_field: AccountId
+Insert InternalOrganizationUnit:
+  sf_object: InternalOrganizationUnit
+  table: InternalOrganizationUnit
+  fields:
+  - Description
+  - OrganizationCode
+  - OrganizationName
+  - IsParentCompany
+  - Type
+  lookups:
+    AccountId:
+      table: Account
+      key_field: AccountId
+    ParentOrganizationId:
+      table: InternalOrganizationUnit
+      key_field: ParentOrganizationId
+      after: Insert InternalOrganizationUnit
+Insert ElectricityEmssnFctrSet:
+  sf_object: ElectricityEmssnFctrSet
+  table: ElectricityEmssnFctrSet
+  fields:
+  - Ch4EmissionRate
+  - Ch4EmissionRateUnit
+  - City
+  - Co2EmissionRate
+  - Co2EmissionRateUnit
+  - Co2eEmissionRate
+  - Co2eEmissionRateUnit
+  - Country
+  - EmissionFactorDataSource
+  - GenlConversionFctrRevisionDate
+  - EmissionsFactorType
+  - EmissionFactorUpdateYear
+  - ExternalIdentifier
+  - GridSubregion
+  - LocationBasedBiomassMixPct
+  - LocationBasedCoalMixPct
+  - LocationBasedGasMixPct
+  - LocBasedGeothermalMixPct
+  - LocationBasedHydroMixPct
+  - LocationBasedNuclearMixPct
+  - LocationBasedOilMixPct
+  - LocBasedOtherFossilFuelMixPct
+  - LocationBasedOtherFuelMixPct
+  - LocationBasedSolarMixPct
+  - LocationBasedWindMixPct
+  - ShouldLockDtastUpdtForRec
+  - MarketBasedBiomassMixPct
+  - MktBsdCh4EmssnRate
+  - MktBsdCh4EmssnRateUnit
+  - MktBsdCo2EmssnRate
+  - MktBsdCo2EmssnRateUnit
+  - MktBsdCo2eEmissionRate
+  - MktBsdCo2eEmissionRateUnit
+  - MarketBasedCoalMixPct
+  - MktBsdDataSrcType
+  - MarketBasedGasMixPct
+  - MktBasedGeothermalMixPct
+  - MarketBasedHydroMixPct
+  - MktBsdN2oEmssnRate
+  - MktBsdN2oEmssnRateUnit
+  - MarketBasedNuclearMixPct
+  - MarketBasedOilMixPct
+  - MktBasedOtherFossilFuelMixPct
+  - MarketBasedOtherFuelMixPct
+  - MarketBasedSolarMixPct
+  - MarketBasedWindMixPct
+  - N2oEmissionRate
+  - N2oEmissionRateUnit
+  - Name
+  - PostalCodeSet
+  - State
+  lookups:
+    OtherEmssnFctrId:
+      table: OtherEmssnFctrSet
+      key_field: OtherEmssnFctrId
+    MktBsdElectrSupplierId:
+      table: Supplier
+      key_field: MktBsdElectrSupplierId
+Insert StnryAssetEnvrSrc:
+  sf_object: StnryAssetEnvrSrc
+  table: StnryAssetEnvrSrc
+  fields:
+  - BusinessRegion
+  - City
+  - Country
+  - Description
+  - IsCompanyOwnedAsset
+  - IsLeedCertified
+  - LeaseExpirationDate
+  - LeaseIdentifier
+  - Name
+  - OccupiedFloorArea
+  - OccupiedFloorAreaUnit
+  - PostalCode
+  - PremiseIdentifier
+  - State
+  - StationaryAssetIdentifier
+  - StationaryAssetType
+  - StreetAddress
+  - StreetAddress2
+  - TotalFloorArea
+  - TotalFloorAreaUnit
+  - RecordTypeId
+  lookups:
+    AccountNameId:
+      table: Account
+      key_field: AccountNameId
+    RegionalBldgEnergyIntensityId:
+      table: BldgEnrgyIntensity
+      key_field: RegionalBldgEnergyIntensityId
+    CrbnEmssnScopeAllocId:
+      table: CrbnEmssnScopeAlloc
+      key_field: CrbnEmssnScopeAllocId
+    ElectricityEmssnFctrId:
+      table: ElectricityEmssnFctrSet
+      key_field: ElectricityEmssnFctrId
+    MktBsdElectriEmssnFctrId:
+      table: ElectricityEmssnFctrSet
+      key_field: MktBsdElectriEmssnFctrId
+    EnvironmentalRiskId:
+      table: EnvironmentalRisk
+      key_field: EnvironmentalRiskId
+    OtherEmssnFctrId:
+      table: OtherEmssnFctrSet
+      key_field: OtherEmssnFctrId
+    RefrigerantEmssnFctrId:
+      table: RefrigerantEmssnFctr
+      key_field: RefrigerantEmssnFctrId
+    ParentEnvironmentalSourceId:
+      table: StnryAssetEnvrSrc
+      key_field: ParentEnvironmentalSourceId
+      after: Insert StnryAssetEnvrSrc
+    WstDispoEmssnFctrSetId:
+      table: WstDispoEmssnFctrSet
+      key_field: WstDispoEmssnFctrSetId
+Insert StnryAssetCrbnFtprnt:
+  sf_object: StnryAssetCrbnFtprnt
+  table: StnryAssetCrbnFtprnt
+  fields:
+  - AllocationStatus
+  - AuditApprovalStatus
+  - DataGapStatus
+  - EndDate
+  - FootprintStage
+  - Name
+  - OccupiedFloorArea
+  - OccupiedFloorAreaUnit
+  - ReportingDate
+  - ReportingYear
+  - StartDate
+  - SuplScope1Emissions
+  - SuplScope2LocationBasedEmssn
+  - SuplScope2MarketBasedEmssn
+  - SuplScope3DnstrmEmissions
+  - SuplScope3UpstrmEmissions
+  - TotalFloorArea
+  - TotalFloorAreaUnit
+  lookups:
+    AnnualEmssnInventoryId:
+      table: AnnualEmssnInventory
+      key_field: AnnualEmssnInventoryId
+    BuildingEnergyIntensityId:
+      table: BldgEnrgyIntensity
+      key_field: BuildingEnergyIntensityId
+    RegionalBldgEnergyIntensityId:
+      table: BldgEnrgyIntensity
+      key_field: RegionalBldgEnergyIntensityId
+    PrevYrAnnlCarbonFootprintId:
+      table: StnryAssetCrbnFtprnt
+      key_field: PrevYrAnnlCarbonFootprintId
+      after: Insert StnryAssetCrbnFtprnt
+    StnryAssetEnvrSrcId:
+      table: StnryAssetEnvrSrc
+      key_field: StnryAssetEnvrSrcId
+Insert StnryAssetEnrgyUse:
+  sf_object: StnryAssetEnrgyUse
+  table: StnryAssetEnrgyUse
+  fields:
+  - AllocatedRenewableEnergyInKwh
+  - CarbonFootprintReportDate
+  - DataGapFillingMethodName
+  - EndDate
+  - FinalEnergyConsumption
+  - FuelConsumption
+  - FuelConsumptionUnit
+  - FuelType
+  - Name
+  - OccupiedFloorArea
+  - OccupiedFloorAreaUnit
+  - PowerUsageEffectiveness
+  - ProposedEnergyConsumption
+  - RenewableEnergyType
+  - StartDate
+  - SuplScope1Emissions
+  - SuplScope2LocationBasedEmssn
+  - SuplScope2MarketBasedEmssn
+  - SuplScope3DnstrmEmissions
+  - SuplScope3UpstrmEmissions
+  - IsSystemGeneratedRecord
+  - TotalFloorArea
+  - TotalFloorAreaUnit
+  lookups:
+    ElectricityEmissionFactorsId:
+      table: ElectricityEmssnFctrSet
+      key_field: ElectricityEmissionFactorsId
+    MktBsdElectriEmssnFctrId:
+      table: ElectricityEmssnFctrSet
+      key_field: MktBsdElectriEmssnFctrId
+    OtherEmssnFctrId:
+      table: OtherEmssnFctrSet
+      key_field: OtherEmssnFctrId
+    RefrigerantEmssnFctrId:
+      table: RefrigerantEmssnFctr
+      key_field: RefrigerantEmssnFctrId
+    StnryAssetCrbnFtprntId:
+      table: StnryAssetCrbnFtprnt
+      key_field: StnryAssetCrbnFtprntId
+    StnryAssetEnvrSrcId:
+      table: StnryAssetEnvrSrc
+      key_field: StnryAssetEnvrSrcId
+    SupplierId:
+      table: Supplier
+      key_field: SupplierId
